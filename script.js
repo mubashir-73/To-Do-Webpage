@@ -1,0 +1,27 @@
+const container = document.querySelector("#container");
+const content = document.createElement("p");
+const node = document.createTextNode("Hey I'm red!");
+content.style.color = "red";
+content.appendChild(node);
+const content2 = document.createElement("h3");
+const node2 = document.createTextNode("I'm a blue h3!");
+content2.style.color = "blue";
+const content3 = document.createElement("div");
+content3.style.backgroundColor = "pink";
+content3.style.borderColor = "black";
+const childContent = document.createElement("h1");
+const node3 = document.createTextNode("I'm a div");
+const childContent2 = document.createElement("p");
+const node4 = document.createTextNode("ME TOO!");
+childContent2.appendChild(node4);
+childContent.appendChild(node3);
+content3.appendChild(childContent);
+content3.appendChild(childContent2);
+content2.appendChild(node2);
+container.appendChild(content);
+container.appendChild(content2);
+container.appendChild(content3);
+const btn = document.querySelector("#btn");
+btn.addEventListener("click", function (e) {
+  e.target.style.backgroundColor = "blue";
+});
